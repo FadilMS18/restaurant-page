@@ -3,10 +3,10 @@ const HTMLWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
     entry:{
-        main:'./src/main.js',
+        main:'./src/index.js',
     },
     output:{
-        filename:'index.js',
+        filename:'[name].bundle.js',
         path:path.resolve(__dirname, 'dist'),
         clean:true,
     },
@@ -35,10 +35,6 @@ module.exports = {
                         name:'images/[name].[ext]'
                     }
                 }]
-            },
-            {
-                test:/\.css$/i,
-                type:'asset/resource',
             },
         ]
     }
