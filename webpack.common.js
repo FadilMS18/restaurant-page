@@ -14,7 +14,6 @@ module.exports = {
         new HTMLWebpackPlugin({
             title:'Restaurant Page',
             template:'./src/index.html',
-            inject:'body',
             meta:{
                 description:'Restaurant page the odin project',
                 author: 'FadilMs18',
@@ -29,12 +28,7 @@ module.exports = {
             },
             {
                 test:/\.(png|svg|jpg|jpeg|gif)/i,
-                use:[{ 
-                    loader:'file-loader',
-                    options:{
-                        name:'images/[name].[ext]'
-                    }
-                }]
+                type:'asset/resource'
             },
         ]
     }
