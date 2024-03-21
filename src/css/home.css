@@ -1,15 +1,14 @@
 #content{
-    height: 500px;
-    background-color: aqua;
+    height: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top:50px;
-    padding:0 15%;
+    margin-top:25px;
+    padding:0 15% 10%;
+    gap:30px;
 }
 
 #title{
-    background-color: lightcoral;
     width: 100%;
     text-align: center;
 }
@@ -19,10 +18,80 @@
     font-size: 1rem;
 }
 
-#team1{
-    width: 100px;
+#content-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    gap:50px;
 }
 
-#team1 > img{
-    object-fit:cover
+div.home-content{
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 250px;
+    gap:10px;
+    padding:40px 30px 50px 30px;
+    background-color: var(--cardColor);
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, .2);
+    cursor: pointer;
+    user-select: none;
+    transition: .3s;
 }
+
+
+
+.hover{
+    position: relative;
+    z-index: 999999;
+}
+
+.home-content:hover{
+    background-color: var(--primarySoft);
+    transform: scale(1.2);
+}
+.home-content:active{
+    transform: scale(1.1);
+    background-color: var(--primary);
+}
+
+#layer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+    transition: .3s;
+}
+.gone{
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.home-content > img{
+    width: 100%;
+    height:200px;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, .2); 
+    border: none;
+    border-radius: 5%;
+}
+
+#home-content-h1::after{
+    content : 'Joe'
+}
+#home-content-h2::after{
+    content : 'Joe Mama'
+}
+#home-content-h3::after{
+    content : 'Horse'
+}
+
+
