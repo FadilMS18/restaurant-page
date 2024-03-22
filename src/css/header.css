@@ -226,3 +226,32 @@ nav > section{
     transform: scale(1.03);
     box-shadow:0px 35px 35px -18px rgba(255, 255, 255), 0px 0px 5px 1px rgba(255, 255, 255, .35);
 }
+
+
+#footer{
+    background-color: var(--cardColor);
+    height:30px;
+    position: fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, .2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer > h5{
+    font-size: 1rem;
+    user-select: none;
+    transition: .2s; cursor: pointer;
+}
+
+#footer> h5:hover{
+    color: var(--primaryHard);
+
+}
+
+#section2 > .active{
+    background-color: var(--primaryHard);
+}

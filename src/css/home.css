@@ -1,4 +1,4 @@
-#content{
+#home{
     height: 600px;
     display: flex;
     flex-direction: column;
@@ -6,6 +6,7 @@
     margin-top:25px;
     padding:0 15% 10%;
     gap:30px;
+    transition: .3s;
 }
 
 #title{
@@ -79,7 +80,7 @@ div.home-content{
 .home-content > img{
     width: 100%;
     height:200px;
-    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, .2); 
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, .4); 
     border: none;
     border-radius: 5%;
 }
@@ -91,7 +92,14 @@ div.home-content{
     content : 'Joe Mama'
 }
 #home-content-h3::after{
-    content : 'Horse'
+    content : 'Horses'
 }
 
+main#home.zero{
+    opacity:0;
+    pointer-events: none;
+}
+main#home.one{
+    opacity:1;
+}
 
