@@ -5,31 +5,12 @@ import './css/main.css'
 import './css/contact.css'
 
 // Js Import 
-import { callBlackLayer, callJoeScroll, anchorDelete, deleteAll  } from './js/home'
-
+import {callJoeScroll, navbarFunction } from './js/exportFrom'
 
 // Home section
-callBlackLayer()
 callJoeScroll()
-anchorDelete()
+navbarFunction()
 
-const buttons = Array.from(document.querySelectorAll('#section2 > button'))
-console.log(buttons)
-
-buttons.forEach((button)=>{
-    button.addEventListener('click', (e)=>{
-        if(e.target.classList.contains('active')){
-            return
-        }
-        buttons.forEach(but=>{
-            but.classList.value = ''
-        })
-       
-        e.target.classList.add('active')
-
-        deleteAll()
-    })
-})
 
 
 

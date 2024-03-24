@@ -6,7 +6,7 @@
     margin-top:25px;
     padding:0 15% 10%;
     gap:30px;
-    transition: .3s;
+    transition: .15s;
 }
 
 #title{
@@ -42,7 +42,7 @@ div.home-content{
     box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, .2);
     cursor: pointer;
     user-select: none;
-    transition: .3s;
+    transition: .15s;
 }
 
 
@@ -69,7 +69,7 @@ div.home-content{
     z-index: 99999;
     height: 100vh;
     background-color: rgba(0, 0, 0, .5);
-    transition: .3s;
+    transition: .15s;
 }
 .gone{
     opacity: 0;

@@ -239,6 +239,7 @@ nav > section{
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 99999999999;
 }
 
 #footer > h5{

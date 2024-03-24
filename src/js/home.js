@@ -1,15 +1,17 @@
-import farmer from './../images/pexels-jake-heinemann-1482101.jpg' //Img1
-import JoeMama from './../images/stick_man_by_minimoko94-d2zvfn8_400x400.png' //Img2
-import horses from './../images/pexels-pixabay-52500.jpg' //Img3
+const farmer = require('./../images/pexels-jake-heinemann-1482101.jpg') //Img1
+const JoeMama = require('./../images/stick_man_by_minimoko94-d2zvfn8_400x400.png') //Img2
+const horses = require('./../images/pexels-pixabay-52500.jpg') //Img3
 
-const content = Array.from(document.querySelectorAll('.home-content'))
+
 
 const main = document.querySelector('#home')
-main.classList.add('zero')
+callBlackLayer()
 
 const anchor = document.querySelector("#anchor")
 
+// Dark Overlay over card content
 function callBlackLayer(){    
+    const content = Array.from(document.querySelectorAll('.home-content'))
     content.forEach(div =>{
         div.addEventListener('mouseenter', ()=>{
             div.classList.add('hover')
@@ -36,23 +38,22 @@ function callJoeScroll(){
 }
 
 // Delete Everything
-function anchorDelete(){
-    anchor.addEventListener('click',()=>{
-        addMainHome()
-        setTimeout(()=>{
-            document.querySelector('#home').classList.remove('zero')
-        },50)
-    })
+function addHome(){
+    addMainHome()
+    setTimeout(()=>{
+        document.querySelector('#home').classList.remove('zero')
+    },50)
+    callBlackLayer()
+    
 }
 
-function deleteAll(){
+function deleteAllContent(){
     main.classList.add('zero')
     setTimeout(()=>{
         while(main.hasChildNodes()){
             main.removeChild(main.firstChild)
         }
-    },300)
-    
+    },100) 
 }
 
 // Add Image
@@ -148,8 +149,6 @@ function addHomeContent3(){
 }
 
 
-
-
 function addContentContainer(){
     const container = document.createElement('div')
     container.setAttribute('id', 'content-container')
@@ -177,4 +176,4 @@ function addMainHome(){
     
 }
 
-export { callBlackLayer, callJoeScroll, anchorDelete ,deleteAll}
+export {callJoeScroll, addHome ,deleteAllContent}
