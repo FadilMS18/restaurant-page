@@ -4,7 +4,7 @@ const horses = require('./../images/pexels-pixabay-52500.jpg') //Img3
 
 
 
-const main = document.querySelector('#home')
+const main = document.querySelector('#main')
 callBlackLayer()
 
 const anchor = document.querySelector("#anchor")
@@ -29,7 +29,7 @@ function callBlackLayer(){
 // Scroll function smooth
 function scroll(){
     window.scrollTo({
-        top:document.querySelector('#home').offsetTop,
+        top:document.querySelector('#main').offsetTop,
         behavior:'smooth',
     })
 }
@@ -41,7 +41,7 @@ function callJoeScroll(){
 function addHome(){
     addMainHome()
     setTimeout(()=>{
-        document.querySelector('#home').classList.remove('zero')
+        document.querySelector('#main').classList.remove('zero')
     },50)
     callBlackLayer()
     
