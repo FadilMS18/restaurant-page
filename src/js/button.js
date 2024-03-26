@@ -1,4 +1,5 @@
 import { addHome, deleteAllContent } from './home'
+import { addMenu } from './menu'
 const buttons = Array.from(document.querySelectorAll('#section2 > button'))
 
 function navbarFunction(){
@@ -21,6 +22,7 @@ function navbarFunction(){
                 case 'menu' :
                     deleteAllContent()
                     console.log(e.target.textContent);
+                    setTimeout(addMenu, 100)
                     break;
                 case 'contact':
                     deleteAllContent()

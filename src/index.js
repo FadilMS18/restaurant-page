@@ -5,13 +5,10 @@ import './css/menu.css'
 import './css/contact.css'
 
 // Js Import 
-import {callJoeScroll, navbarFunction } from './js/exportFrom'
+import {callJoeScroll, navbarFunction, addHome } from './js/exportFrom'
 
 // Home section
 callJoeScroll()
-// navbarFunction()
+navbarFunction()
 
-
-
-
-
+// document.addEventListener('DOMContentLoaded', addHome)

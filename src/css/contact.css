@@ -1,0 +1,85 @@
+#contact-container{
+    width: 100%;
+    min-height: 650px;
+    /* background-color: var(--cardColor); */
+    background-image: url(./../images/pexels-jake-heinemann-1482101.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border: none;
+    border-radius:1%;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, .3);
+
+    margin-top:50px;
+    overflow: hidden;
+    position: relative;
+}
+
+#form{
+    background-color:  var(--cardColor);
+    height: 550px;
+    width: 550px;
+    border: none;
+    border-radius: 0 0 5px 0 ;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, .3);
+    position: relative;
+    z-index:10;
+}
+
+#contact-footer{
+    bottom:0;
+    left:0;
+    right: 0;
+    position: absolute;
+    z-index: 1;
+
+    background-color:lightgreen;
+    /* OE4DA4 00416A 003171 4169e1 008080 */
+    height: 150px;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, .5);
+}
+
+#contact-footer > h5{
+    position: absolute;
+    font-size: 1.3rem;
+    bottom:20px;
+    left:20px
+}
+
+#contact-info{
+    position: absolute;
+    height: 90px;
+    padding:20px 30px;
+    width:400px;
+    right: 0;
+    bottom: 0;
+    /* background-color: blueviolet; */
+
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    justify-content: center;
+    align-items: center;
+}
+
+#icon-container{
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+}
+
+span.icon{
+    padding:10px ;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--secondary);
+    transition: .25s;
+    cursor: pointer;
+    text-align: center;
+
+}
+
+.icon:hover{
+    transform: scale(1.1);
+    background-color: var(--secondaryHard);
+}

@@ -37,23 +37,14 @@ function callJoeScroll(){
     anchor.addEventListener('click', scroll)
 }
 
-// Delete Everything
+// AddHome Content to DOM
 function addHome(){
     addMainHome()
     setTimeout(()=>{
         document.querySelector('#main').classList.remove('zero')
-    },50)
+    },100)
     callBlackLayer()
     
-}
-
-function deleteAllContent(){
-    main.classList.add('zero')
-    setTimeout(()=>{
-        while(main.hasChildNodes()){
-            main.removeChild(main.firstChild)
-        }
-    },100) 
 }
 
 // Add Image
@@ -159,6 +150,7 @@ function addContentContainer(){
     return container
 }
 
+//Add Everything to Home
 function addMainHome(){
     const h1 = document.createElement('h1')
     h1.innerHTML = 'HOME'
@@ -171,9 +163,16 @@ function addMainHome(){
     main.appendChild(h1) 
     main.appendChild(p)
     main.appendChild(addContentContainer())
-    
-    
-    
+}
+
+// Delete Everything in main
+function deleteAllContent(){
+    main.classList.add('zero')
+    setTimeout(()=>{
+        while(main.hasChildNodes()){
+            main.removeChild(main.firstChild)
+        }
+    },100) 
 }
 
 export {callJoeScroll, addHome ,deleteAllContent}
