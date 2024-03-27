@@ -1,5 +1,6 @@
 import { addHome, deleteAllContent } from './home'
 import { addMenu } from './menu'
+import { addContact } from './contact'
 const buttons = Array.from(document.querySelectorAll('#section2 > button'))
 
 function navbarFunction(){
@@ -15,18 +16,16 @@ function navbarFunction(){
             e.target.classList.add('active')
             switch (button.id) {
                 case 'about':
-                    console.log(e.target.textContent)
                     deleteAllContent()
                     setTimeout(addHome, 100)
                     break;
                 case 'menu' :
                     deleteAllContent()
-                    console.log(e.target.textContent);
                     setTimeout(addMenu, 100)
                     break;
                 case 'contact':
                     deleteAllContent()
-                    console.log(e.target.textContent);
+                    setTimeout(addContact, 100)
                     break;        
                 default:
                     console.log('Something is wrong')

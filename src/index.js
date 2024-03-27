@@ -11,4 +11,5 @@ import {callJoeScroll, navbarFunction, addHome } from './js/exportFrom'
 callJoeScroll()
 navbarFunction()
 
-// document.addEventListener('DOMContentLoaded', addHome)
+document.addEventListener('DOMContentLoaded', addHome)
+
